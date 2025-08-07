@@ -23,14 +23,14 @@ LT_ACCESS_KEY= your_lambdatest_access_key
 
 ## Configuration
 Run the script below to load the test configurations from the **.\data\test_data.xlsx** Excel file:
-<pre> python generate_config.py </pre>
+<pre> python .\data\generate_config.py </pre>
 
 - **Devices Sheet**: Reads browser, browserVersion, platform, platformVersion, deviceName, and other test environment parameters.
 - **Credentials Sheet**: Reads the test URL for testing.
 
 ## Running Tests
 Run a test using pytest:
-<pre> pytest .\tests\<your_test_file>.py -v -s </pre>
+<pre> pytest .\tests\your_test_file.py -v -s </pre>
 
 The framework will:
 - Execute the test across all environments defined in the Excel file.
