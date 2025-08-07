@@ -31,7 +31,10 @@ Run the script below to load the test configurations from the **.\data\test_data
 ## Running Tests
 Run a test using pytest:
 <pre> pytest .\tests\<your_test_file>.py -v -s </pre>
-The framework will execute the test across all the environments defined in the Excel file.
+
+The framework will:
+- Execute the test across all environments defined in the Excel file.
+- Automatically generate a compatibility test report in Excel format after execution.
 
 ## License and Plan
 - **Platform**: LambdaTest
