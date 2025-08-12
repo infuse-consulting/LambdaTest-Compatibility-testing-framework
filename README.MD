@@ -55,6 +55,7 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
 
 **Example**:
+
 ![alt text](image.png)
 
 ### Load Test Configurations
