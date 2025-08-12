@@ -10,24 +10,7 @@ This project is a Selenium-based Python automation framework designed for cross-
 - Automatically generates an Excel report with Device/browser/OS info,Test execution status and LambdaTest video session link
 
 ## Project Structure
-
-Compatibilty_testing/
-│
-├── src/
-│   ├── data/                    # Test data & configuration
-│   │   ├── test_data.xlsx       # Excel with device/browser/test URL configs
-│   │   ├── generate_config.py   # Script to convert Excel to JSON config
-│   │
-│   ├── pages/                   # Page Object Model (POM) classes
-│   ├── utils/                   # Helper utilities (logger, assertions, etc.)
-│
-├── tests/                       # Test scripts
-├── reports/                     # Generated Excel reports after execution
-├── .env                         # LambdaTest credentials 
-├── conftest.py                  # Pytest fixtures & setup
-├── framework.py                 # Core test execution logic
-├── requirements.txt             # Dependencies
-├── README.md
+![alt text](image-1.png)
 
 ## Pre-requisites
 ### Create a LambdaTest Account & Get Credentials
