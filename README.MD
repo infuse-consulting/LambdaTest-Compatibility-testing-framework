@@ -28,14 +28,14 @@ This project is a Selenium-based Python automation framework designed for cross-
 1. **Clone the repository**
 <pre>
 git clone https://github.com/srujanaa6/Compatibilty-testing.git
-cd project_name
+cd Compatibilty_testing
 </pre>
 
 2. **Install dependencies**
 <pre> pip install -r requirements.txt </pre>
 
 3. **Set up LambdaTest credentials in project**
-Create a .env file in the root directory:
+Create a **.env** file in the root directory:
 <pre>LT_USERNAME= your_lambdatest_username
 LT_ACCESS_KEY= your_lambdatest_access_key
 </pre>
