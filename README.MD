@@ -1,13 +1,17 @@
 # LambdaTest Compatibility and Cross-Browser Testing Framework
 
 ## Overview
-This project is a Selenium-based Python automation framework designed for cross-browser and cross-device testing using the LambdaTest platform. It enables the execution of test scripts across a wide range of real and virtual devices.The framework follows Page Object Model (POM) design pattern, promoting reusability, maintainability.
+This project is a Selenium-based Python automation framework designed for cross-browser and cross-device testing using the LambdaTest platform. 
 
-## Main Features
-- Reads test configurations from Excel
+It enables the execution of test scripts across a wide range of real and virtual devices.The framework follows Page Object Model (POM) design pattern, promoting reusability, maintainability.
+
+## Key Features
+- **Excel-Driven Configurations**
   - The framework extracts test environment details such as browser, platform, device name and test URL from a structured Excel file without modifying code.
-- Allows Cross-browser and cross-device testing on LambdaTest and Supports both real and virtual devices
-- Automatically generates an Excel report with Device/browser/OS info,Test execution status and LambdaTest video session link
+- **Cross-Browser & Cross-Device Execution**
+  - Allows Cross-browser and cross-device testing on LambdaTest and Supports both real and virtual devices
+- **Automated Reporting**
+  - Automatically generates an Excel report with Device/browser/OS info,Test execution status and LambdaTest video session link
 
 ## Tech Stack
 - Python for test scripts.
@@ -17,7 +21,7 @@ This project is a Selenium-based Python automation framework designed for cross-
 ## Project Structure
 ![alt text](image-1.png)
 
-## Pre-requisites
+## Prerequisites
 ### Create a LambdaTest Account & Get Credentials
 -	**Sign Up**: Go to LambdaTest [Sign Up](https://accounts.lambdatest.com/dashboard) and create a free account.
 - 💡 Note: Plan Selection: For real device testing, ensure your plan includes: Web Automation Testing → Web & Mobile Browser on Real Device
@@ -26,15 +30,18 @@ This project is a Selenium-based Python automation framework designed for cross-
 
 ## Installation
 1. **Clone the repository**
+
 <pre>
 git clone https://github.com/srujanaa6/Compatibilty-testing.git
 cd Compatibilty_testing
 </pre>
 
 2. **Install dependencies**
+
 <pre> pip install -r requirements.txt </pre>
 
 3. **Set up LambdaTest credentials in project**
+
 Create a **.env** file in the root directory:
 <pre>LT_USERNAME= your_lambdatest_username
 LT_ACCESS_KEY= your_lambdatest_access_key
@@ -47,9 +54,6 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 - **Credentials Sheet**: Stores the test URL and related credentials for running tests.
 💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
 
-### How to Set Up Test data
-- The framework reads each row from the Devices Sheet.
-- Execute the test across all environments defined in the sheet.
 **Example**:
 ![alt text](image.png)
 
@@ -75,6 +79,10 @@ Run a test using pytest:
 
 ### The framework will:
 - Execute the test across all environments defined in the Excel file.
-- Automatically generates a **compatibility_test_report** in reports folder in Excel format after execution.
+- Automatically generates a **compatibility_test_report** in reports/ folder in Excel format with:
+  - Device / Browser / OS details
+  - Pass/Fail status
+  - LambdaTest session video link
 
-
+**Example**:
+![alt text](image-2.png)
