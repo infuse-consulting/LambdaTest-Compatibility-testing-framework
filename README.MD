@@ -64,14 +64,14 @@ Run the following script to generate the test configuration JSON from .\src\data
 
 Eaxmple of generated Test configuration JSON object:
 <pre>
-        {
-            "browser": "Chrome",
-            "browserVersion": "138",
-            "platformName": "android",
-            "platformVersion": "14",
-            "deviceName": "Galaxy S24 ",
-            "isRealMobile": "False"
-        }
+  {
+    "browser": "Chrome",
+    "browserVersion": "138",
+    "platformName": "android",
+    "platformVersion": "14",
+    "deviceName": "Galaxy S24 ",
+    "isRealMobile": "False"
+  }
 </pre>
 
 ## Running Tests
