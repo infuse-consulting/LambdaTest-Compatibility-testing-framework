@@ -52,7 +52,7 @@ The file **./src/data/test_data.xlsx** contains all configuration data for your 
 - **Devices Sheet**: Defines cross-browser/device parameters:
 browser, browserVersion, platform, platformVersion, deviceName, etc.
 - **Credentials Sheet**: Stores the test URL and related credentials for running tests.
-💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
+- 💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
 
 **Example**:
 
