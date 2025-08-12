@@ -9,27 +9,32 @@ This project is a Selenium-based Python automation framework designed for cross-
 - Allows Cross-browser and cross-device testing on LambdaTest and Supports both real and virtual devices
 - Automatically generates an Excel report with Device/browser/OS info,Test execution status and LambdaTest video session link
 
+## Tech Stack
+- Python for test scripts.
+- Selenium WebDriver for Browser automation.
+- pytest for Test execution.
+
 ## Project Structure
 ![alt text](image-1.png)
 
 ## Pre-requisites
 ### Create a LambdaTest Account & Get Credentials
--	Sign Up: Go to LambdaTest [Sign Up](https://accounts.lambdatest.com/dashboard) and create a free account.
+-	**Sign Up**: Go to LambdaTest [Sign Up](https://accounts.lambdatest.com/dashboard) and create a free account.
 - 💡 Note: Plan Selection: For real device testing, ensure your plan includes: Web Automation Testing → Web & Mobile Browser on Real Device
 - Get Your Credentials: Once logged in, open the side menu in the Dashboard.
 - Copy your Username and Access Key from the Credentials section to connect your tests to LambdaTest.
 
 ## Installation
-1. Clone the repository
+1. **Clone the repository**
 <pre>
 git clone https://github.com/srujanaa6/Compatibilty-testing.git
 cd project_name
 </pre>
 
-2. Install dependencies
+2. **Install dependencies**
 <pre> pip install -r requirements.txt </pre>
 
-3. Set up LambdaTest credentials in project
+3. **Set up LambdaTest credentials in project**
 Create a .env file in the root directory:
 <pre>LT_USERNAME= your_lambdatest_username
 LT_ACCESS_KEY= your_lambdatest_access_key
@@ -70,6 +75,6 @@ Run a test using pytest:
 
 ### The framework will:
 - Execute the test across all environments defined in the Excel file.
-- Automatically generates a *compatibility_test_report* in reports folder in Excel format after execution.
+- Automatically generates a **compatibility_test_report** in reports folder in Excel format after execution.
 
 
