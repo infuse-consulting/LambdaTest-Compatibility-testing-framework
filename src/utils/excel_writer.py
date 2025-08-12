@@ -4,7 +4,7 @@ from openpyxl import load_workbook
 from openpyxl.worksheet.hyperlink import Hyperlink
 from openpyxl.styles import Font, Alignment
 
-EXCEL_FILE = "compatibility_test_report.xlsx"
+EXCEL_FILE = "../reports/compatibility_test_report.xlsx"
 def write_result(result, excel_file=EXCEL_FILE):
     df = pd.DataFrame([result])
     try:

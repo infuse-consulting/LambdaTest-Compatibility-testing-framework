@@ -1,6 +1,6 @@
 from selenium.webdriver.support.ui import WebDriverWait
 import time
-from utils.logger import message_logger
+from .logger import message_logger
 
 def hide_keyboard(driver):
     try:

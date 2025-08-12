@@ -1,4 +1,4 @@
-from utils.logger import message_logger
+from .logger import message_logger
 from selenium.webdriver.support.ui import Select
 from framework import Framework
 

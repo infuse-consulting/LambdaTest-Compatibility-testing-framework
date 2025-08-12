@@ -9,35 +9,53 @@ This project is a Selenium-based Python automation framework designed for cross-
 - Allows Cross-browser and cross-device testing on LambdaTest and Supports both real and virtual devices
 - Automatically generates an Excel report with Device/browser/OS info,Test execution status and LambdaTest video session link
 
+## Pre-requisites
+### Create a LambdaTest Account & Get Credentials
+1.	Sign Up – Go to LambdaTest Sign Up and create a free account.
+💡 Note: Plan Selection: For real device testing, ensure your plan includes:
+Web Automation Testing → Web & Mobile Browser on Real Device
+2.	Get Your Credentials: Once logged in, open the side menu in the Dashboard.
+3.	Copy your Username and Access Key from the Credentials section to connect your tests to LambdaTest.
+
 ## Installation
 1. Clone the repository
+<pre>
+git clone https://github.com/srujanaa6/Compatibilty-testing.git
+cd project_name
+</pre>
 
 2. Install dependencies
 <pre> pip install -r requirements.txt </pre>
 
-3. Set up LambdaTest credentials
+3. Set up LambdaTest credentials in project
 Create a .env file in the root directory:
 <pre>LT_USERNAME= your_lambdatest_username
 LT_ACCESS_KEY= your_lambdatest_access_key
 </pre>
 
-## Configuration
-Run the script below to load the test configurations from the **.\data\test_data.xlsx** Excel file:
-<pre> python .\data\generate_config.py </pre>
+## Test Data Configuration
+The file **./src/data/test_data.xlsx** contains all configuration data for your test environment:
+- **Devices Sheet**: Defines cross-browser/device parameters:
+browser, browserVersion, platform, platformVersion, deviceName, etc.
+- **Credentials Sheet**: Stores the test URL and related credentials for running tests.
+💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator.
 
-- **Devices Sheet**: Reads browser, browserVersion, platform, platformVersion, deviceName, and other test environment parameters.
-- **Credentials Sheet**: Reads the test URL for testing.
+### How It Works
+- The framework reads each row from the Devices Sheet.
+- Execute the test across all environments defined in the sheet.
+**Example**:
+![alt text](image.png)
+
+### Load Test Configurations
+Run the following script to generate the test configuration JSON from .\src\data\test_data.xlsx:
+<pre> python .\src\data\generate_config.py </pre>
 
 ## Running Tests
 Run a test using pytest:
 <pre> pytest .\tests\your_test_file.py -v -s </pre>
 
-The framework will:
+### The framework will:
 - Execute the test across all environments defined in the Excel file.
-- Automatically generate a compatibility test report in Excel format after execution.
+- Automatically generates a *compatibility_test_report* in reports folder in Excel format after execution.
 
-## License and Plan
-- **Platform**: LambdaTest
-- **Plan Used**: Under Web automation testing: Web & Mobile Browser on Real Device
-- **Pricing**: $158/month
 
