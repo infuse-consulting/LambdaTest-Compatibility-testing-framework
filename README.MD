@@ -84,5 +84,5 @@ Run a test using pytest:
   - Pass/Fail status
   - LambdaTest session video link
 
-Example of **/./reports/compatibility_test_report**:
+Example of **./reports/compatibility_test_report**:
 ![alt text](image-2.png)
