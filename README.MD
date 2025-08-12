@@ -11,11 +11,10 @@ This project is a Selenium-based Python automation framework designed for cross-
 
 ## Pre-requisites
 ### Create a LambdaTest Account & Get Credentials
-1.	Sign Up – Go to LambdaTest Sign Up and create a free account.
-💡 Note: Plan Selection: For real device testing, ensure your plan includes:
-Web Automation Testing → Web & Mobile Browser on Real Device
-2.	Get Your Credentials: Once logged in, open the side menu in the Dashboard.
-3.	Copy your Username and Access Key from the Credentials section to connect your tests to LambdaTest.
+-	Sign Up – Go to LambdaTest [Sign Up](https://accounts.lambdatest.com/dashboard) and create a free account.
+- 💡 Note: Plan Selection: For real device testing, ensure your plan includes: Web Automation Testing → Web & Mobile Browser on Real Device
+- Get Your Credentials: Once logged in, open the side menu in the Dashboard.
+- Copy your Username and Access Key from the Credentials section to connect your tests to LambdaTest.
 
 ## Installation
 1. Clone the repository
@@ -38,9 +37,9 @@ The file **./src/data/test_data.xlsx** contains all configuration data for your 
 - **Devices Sheet**: Defines cross-browser/device parameters:
 browser, browserVersion, platform, platformVersion, deviceName, etc.
 - **Credentials Sheet**: Stores the test URL and related credentials for running tests.
-💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator.
+💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
 
-### How It Works
+### How to Set Up Test data
 - The framework reads each row from the Devices Sheet.
 - Execute the test across all environments defined in the sheet.
 **Example**:
@@ -49,6 +48,18 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 ### Load Test Configurations
 Run the following script to generate the test configuration JSON from .\src\data\test_data.xlsx:
 <pre> python .\src\data\generate_config.py </pre>
+
+Eaxmple of generated Test configuration JSON object:
+<pre>
+        {
+            "browser": "Chrome",
+            "browserVersion": "138",
+            "platformName": "android",
+            "platformVersion": "14",
+            "deviceName": "Galaxy S24 ",
+            "isRealMobile": "False"
+        }
+</pre>
 
 ## Running Tests
 Run a test using pytest:
