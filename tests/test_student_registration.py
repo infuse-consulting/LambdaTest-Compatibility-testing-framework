@@ -1,6 +1,6 @@
 import pytest
-from pages.register_page import RegisterPage
-from utils.projectUtils import Utils
+from src.pages.register_page import RegisterPage
+from src.utils.projectUtils import Utils
 
 @pytest.mark.usefixtures("driver", "dataLoad")
 def test_course_registration_for_student(driver, dataLoad):

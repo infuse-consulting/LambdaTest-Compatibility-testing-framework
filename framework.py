@@ -4,8 +4,8 @@ from selenium.common.exceptions import TimeoutException,NoSuchElementException,E
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
-from utils.logger import message_logger
-from utils.get_platform import get_platform
+from src.utils.logger import message_logger
+from src.utils.get_platform import get_platform
 
 class Framework:    
     def __init__(self,driver):

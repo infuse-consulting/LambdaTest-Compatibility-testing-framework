@@ -5,7 +5,7 @@ load_dotenv()
 import json
 from selenium import webdriver
 from urllib.parse import quote
-from utils.excel_writer import write_result
+from src.utils.excel_writer import write_result
 from datetime import datetime
 import pandas as pd
 from datetime import datetime
@@ -14,11 +14,11 @@ from datetime import datetime
 def dataLoad():
     username=os.getenv("LT_USERNAME")
     password=os.getenv("LT_ACCESS_KEY")
-    df = pd.read_excel("data/test_data.xlsx", sheet_name="Credentials")
+    df = pd.read_excel("./src/data/test_data.xlsx", sheet_name="Credentials")
     url = df['url'].iloc[0].strip()
     return [username,password,url]
 
-json_file_path = os.path.join(os.path.dirname(__file__), "./data/test_data.json")
+json_file_path = os.path.join(os.path.dirname(__file__), "./src/data/test_data.json")
 with open(json_file_path) as f:
     test_configs = json.load(f)["data"]
 
