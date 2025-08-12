@@ -33,7 +33,7 @@ It enables the execution of test scripts across a wide range of real and virtual
 
 <pre>
 git clone https://github.com/srujanaa6/Compatibilty-testing.git
-cd Compatibilty_testing
+cd Compatibilty-testing
 </pre>
 
 2. **Install dependencies**
