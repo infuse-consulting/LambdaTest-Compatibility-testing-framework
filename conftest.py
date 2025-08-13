@@ -12,6 +12,7 @@ from datetime import datetime
 
 @pytest.fixture()
 def dataLoad():
+    """Load LambdaTest credentials and test URL from environment variables and Excel sheet"""
     username=os.getenv("LT_USERNAME")
     password=os.getenv("LT_ACCESS_KEY")
     df = pd.read_excel("./src/data/test_data.xlsx", sheet_name="Credentials")
@@ -24,10 +25,12 @@ with open(json_file_path) as f:
 
 @pytest.fixture(params=test_configs)
 def device_config(request):
+    """Provide device/browser configuration for each test from JSON file"""
     return request.param
 
 @pytest.fixture(scope="function")
-def driver(dataLoad, device_config, request):
+def driver(dataLoad, device_config):
+    """Initialize Selenium Remote WebDriver session with LambdaTest capabilities"""
     username = quote(dataLoad[0])
     password = quote(dataLoad[1])
     browser = device_config['browser']
@@ -96,24 +99,25 @@ def driver(dataLoad, device_config, request):
     yield driver
     driver.quit()
 
-def store_metadata(session_id,device_config):
-    lt_username = os.getenv("LT_USERNAME")
-    lt_access_key = os.getenv("LT_ACCESS_KEY")
-    auth = (lt_username, lt_access_key)
-    browser = device_config.get("browser", "")
-    browser_version = device_config.get("browserVersion", "")
-    platform = device_config.get("platformName", "")
-    platform_version = device_config.get("platformVersion", "")
-    device = device_config.get("deviceName", "")
-    display_device_name = device if device else "Desktop"
-    timestamp = datetime.now().strftime("%d_%H%M%S")
-    folder_name = f"{display_device_name}_{platform}_{platform_version}_{browser}_{browser_version}_{timestamp}".replace(" ", "_")
-    test_folder = os.path.join(os.path.dirname(__file__), 'evidence', folder_name)
-    os.makedirs(test_folder, exist_ok=True)
+# def store_metadata(session_id,device_config):
+#     lt_username = os.getenv("LT_USERNAME")
+#     lt_access_key = os.getenv("LT_ACCESS_KEY")
+#     auth = (lt_username, lt_access_key)
+#     browser = device_config.get("browser", "")
+#     browser_version = device_config.get("browserVersion", "")
+#     platform = device_config.get("platformName", "")
+#     platform_version = device_config.get("platformVersion", "")
+#     device = device_config.get("deviceName", "")
+#     display_device_name = device if device else "Desktop"
+#     timestamp = datetime.now().strftime("%d_%H%M%S")
+#     folder_name = f"{display_device_name}_{platform}_{platform_version}_{browser}_{browser_version}_{timestamp}".replace(" ", "_")
+#     test_folder = os.path.join(os.path.dirname(__file__), 'evidence', folder_name)
+#     os.makedirs(test_folder, exist_ok=True)
 
 
 @pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item, call):
+def pytest_runtest_makereport(item):
+    """Store test results in report after each test execution"""
     outcome = yield
     report = outcome.get_result()
 
@@ -139,7 +143,7 @@ def pytest_runtest_makereport(item, call):
             driver = item.funcargs.get("driver", None)
             if driver:
                 session_id = driver.session_id
-                store_metadata(session_id,device_config)
+                # store_metadata(session_id,device_config)
                 video_url = f"https://automation.lambdatest.com/logs/?sessionID={session_id}"
                 result["Video Link"] = video_url
 
