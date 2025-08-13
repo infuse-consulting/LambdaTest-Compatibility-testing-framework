@@ -81,7 +81,7 @@ Run a test using pytest:
 ### The framework will:
 - Execute the test across all environments defined in the Excel file.
 - Automatically generates a **compatibility_test_report** in reports/ folder in Excel format with:
-  - Device / Browser / OS details
+  - Device, Browser,Platform details
   - Pass/Fail status
   - LambdaTest session video link
 
