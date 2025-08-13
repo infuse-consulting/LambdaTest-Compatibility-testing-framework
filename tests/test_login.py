@@ -9,4 +9,4 @@ def test_course_registration_for_student(driver, dataLoad):
     login_page = LoginPage(driver)
     assertion=Utils(driver)
     login_page.login()
-    # assertion.assert_page_is_displayed()
+    assertion.assert_page_is_displayed(login_page.products_catalog_page,"Products Catalog Page")

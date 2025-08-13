@@ -60,7 +60,7 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 
 ### Load Test Configurations
 Run the following script to generate the test configuration JSON from .\src\data\test_data.xlsx:
-<pre> python .\src\data\generate_config.py </pre>
+<pre>python .\src\data\generate_config.py </pre>
 
 Eaxmple of generated Test configuration JSON object:
 <pre>

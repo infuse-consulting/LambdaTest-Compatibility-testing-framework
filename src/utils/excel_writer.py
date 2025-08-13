@@ -4,7 +4,8 @@ from openpyxl import load_workbook
 from openpyxl.worksheet.hyperlink import Hyperlink
 from openpyxl.styles import Font, Alignment
 
-EXCEL_FILE = "../reports/compatibility_test_report.xlsx"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+EXCEL_FILE = os.path.join(BASE_DIR, "reports", "compatibility_test_report.xlsx")
 def write_result(result, excel_file=EXCEL_FILE):
     df = pd.DataFrame([result])
     try:
@@ -42,7 +43,6 @@ def write_result(result, excel_file=EXCEL_FILE):
                 cell.alignment = Alignment(horizontal='left')
 
         book.save(excel_file)
-
     except PermissionError:
         print(f"Excel file '{excel_file}' is locked. Please close the file and retry.")
     except Exception as e:
