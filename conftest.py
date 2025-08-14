@@ -12,10 +12,10 @@ from datetime import datetime
 
 @pytest.fixture()
 def dataLoad():
-    """Load LambdaTest credentials and test URL from environment variables and Excel sheet"""
+    """Load LambdaTest test URL from environment variables and Excel sheet"""
     username=os.getenv("LT_USERNAME")
     password=os.getenv("LT_ACCESS_KEY")
-    df = pd.read_excel("./src/data/test_data.xlsx", sheet_name="Credentials")
+    df = pd.read_excel("./src/data/test_data.xlsx", sheet_name="Url")
     url = df['url'].iloc[0].strip()
     return [username,password,url]
 

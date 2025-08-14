@@ -108,3 +108,8 @@ Example of **./reports/compatibility_test_report.xlsx**:
 <pre>
 💡 Note: Every execution appends Test Results to compatibility_test_report
 </pre>
+
+
+## Workflow
+
+![alt text](image-6.png)
