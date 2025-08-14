@@ -8,7 +8,8 @@ from urllib.parse import quote
 from src.utils.excel_writer import write_result
 from datetime import datetime
 import pandas as pd
-from datetime import datetime
+from src.pages.login_page import LoginPage
+from src.utils.projectUtils import Utils
 
 @pytest.fixture()
 def dataLoad():
@@ -22,6 +23,15 @@ def dataLoad():
 json_file_path = os.path.join(os.path.dirname(__file__), "./src/data/test_data.json")
 with open(json_file_path) as f:
     test_configs = json.load(f)["data"]
+
+@pytest.fixture
+def setup(driver, dataLoad):
+    """Prepare LoginPage, Utils, and URL for tests"""
+    _, _, url = dataLoad
+    login_page = LoginPage(driver)
+    assertion = Utils(driver)
+    return login_page, assertion, url
+
 
 @pytest.fixture(params=test_configs)
 def device_config(request):

@@ -110,6 +110,22 @@ Example of generated Test configuration JSON object from excel file **./src/data
   }
 </pre>
 
+### Test Setup Fixtures
+
+The **conftest.py** file contains reusable pytest fixtures for test setup.
+- **dataLoad**: Loads test data (username, access key, URL) from .env and Excel.
+- **driver**: Creates and configures a Selenium WebDriver session on LambdaTest.
+- **setup**: Returns pre-initialized `LoginPage`, `Utils` to use in tests.
+
+**Example usage in a test:**
+<pre>
+def test_login(setup):
+    login_page, assertion, url = setup
+    login_page.navigate_to_page(url)
+    login_page.login()
+    assertion.assert_page_is_displayed(login_page.products_catalog_page, "Products Catalog Page")
+</pre>
+
 ## Running Tests
 Run a test using pytest:
 <pre> pytest .\tests\your_test_file.py -v -s </pre>
