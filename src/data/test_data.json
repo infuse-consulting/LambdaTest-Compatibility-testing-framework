@@ -7,38 +7,6 @@
             "platformVersion": "latest",
             "deviceName": "",
             "isRealMobile": "False"
-        },
-        {
-            "browser": "Safari",
-            "browserVersion": "19",
-            "platformName": "ios",
-            "platformVersion": "18.1",
-            "deviceName": "iPhone 16",
-            "isRealMobile": "False"
-        },
-        {
-            "browser": "Chrome",
-            "browserVersion": "138",
-            "platformName": "android",
-            "platformVersion": "15",
-            "deviceName": "Galaxy S25",
-            "isRealMobile": "False"
-        },
-        {
-            "browser": "Chrome",
-            "browserVersion": "138",
-            "platformName": "android",
-            "platformVersion": "14",
-            "deviceName": "Galaxy Tab s8+",
-            "isRealMobile": "False"
-        },
-        {
-            "browser": "Safari",
-            "browserVersion": "17",
-            "platformName": "ios",
-            "platformVersion": "17",
-            "deviceName": "iPad (9th generation)",
-            "isRealMobile": "False"
         }
     ]
 }

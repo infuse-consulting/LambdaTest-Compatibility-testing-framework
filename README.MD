@@ -42,6 +42,26 @@ Create a **.env** file in the root directory:
 LT_ACCESS_KEY= your_lambdatest_access_key
 </pre>
 
+## Set up virtual environment (recommended)
+
+### Windows (PowerShell)
+<pre>
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+</pre>
+
+### Windows (Command Prompt)
+<pre>
+python -m venv .venv
+.venv\Scripts\activate.bat
+</pre>
+
+### macOS / Linux
+<pre>
+python3 -m venv .venv
+source .venv/bin/activate
+</pre>
+
 ## Test Data Configuration
 The file **./src/data/test_data.xlsx** contains all configuration data for your test environment:
 
