@@ -64,8 +64,10 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 
 ![alt text](image-5.png)
 
-- 💡 Note: To check which devices support which platform versions:
+<pre>
+💡 Note: To check which devices support which platform versions:
  use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
+</pre>
 
 ## Load Test Configurations
 Run the following script to generate the test configuration JSON from .\src\data\test_data.xlsx:
@@ -104,5 +106,5 @@ Example of **./reports/compatibility_test_report.xlsx**:
 ![alt text](image-2.png)
 
 <pre>
-- 💡 Note: Every execution appends Test Results to compatibility_test_report
+💡 Note: Every execution appends Test Results to compatibility_test_report
 </pre>
