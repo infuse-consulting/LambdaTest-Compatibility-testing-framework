@@ -112,4 +112,4 @@ Example of **./reports/compatibility_test_report.xlsx**:
 
 ## Workflow
 
-![alt text](image-6.png)
+![alt text](image-8.png)
