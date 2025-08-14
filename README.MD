@@ -70,13 +70,11 @@ The file `./src/data/test_data.xlsx` contains all configuration data for your te
 **Devices Sheet**: Defines cross-browser/device parameters:
 browser, browserVersion, platform, platformVersion, deviceName, etc.
 
-<pre>
 💡 Note: Use the provided template.You may add new devices, but ensure column names remain unchanged.
-</pre>
 
 💡 Note: To check which devices support which platform versions:
  use the [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
- 
+
 **Example**:
 
 ![alt text](images/image.png)
