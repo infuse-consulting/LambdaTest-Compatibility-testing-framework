@@ -59,11 +59,14 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 ![alt text](image.png)
 
 - **Credentials Sheet**: Stores the test URL and related credentials for running tests.
-- 💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
 
 **Example**:
 
 ![alt text](image-5.png)
+
+<pre>
+- 💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
+<pre>
 
 ### Load Test Configurations
 Run the following script to generate the test configuration JSON from .\src\data\test_data.xlsx:
@@ -96,5 +99,9 @@ Run a test using pytest:
   - Pass/Fail status
   - LambdaTest session video link
 
-Example of **./reports/compatibility_test_report**:
+Example of **./reports/compatibility_test_report.xlsx**:
 ![alt text](image-2.png)
+
+<pre>
+- 💡 Note: Every execution appends Test Results to compatibility_test_report
+</pre>
