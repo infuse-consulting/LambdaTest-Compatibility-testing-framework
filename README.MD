@@ -50,6 +50,10 @@ The file **./src/data/test_data.xlsx** contains all configuration data for your 
 **Devices Sheet**: Defines cross-browser/device parameters:
 browser, browserVersion, platform, platformVersion, deviceName, etc.
 
+<pre>
+💡 Note: Use the provided template.You may add new devices, but ensure column names remain unchanged.
+</pre>
+
 **Example**:
 
 ![alt text](image.png)
