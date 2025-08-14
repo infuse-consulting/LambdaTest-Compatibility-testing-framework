@@ -45,15 +45,16 @@ LT_ACCESS_KEY= your_lambdatest_access_key
 ## Test Data Configuration
 The file **./src/data/test_data.xlsx** contains all configuration data for your test environment:
 
-![alt text](image-4.png)
-- **Devices Sheet**: Defines cross-browser/device parameters:
+![alt text](image-7.png)
+
+**Devices Sheet**: Defines cross-browser/device parameters:
 browser, browserVersion, platform, platformVersion, deviceName, etc.
 
 **Example**:
 
 ![alt text](image.png)
 
-- **Url Sheet**: Stores the test URL and related credentials for running tests.
+**Url Sheet**: Stores the test URL and related credentials for running tests.
 
 **Example**:
 
