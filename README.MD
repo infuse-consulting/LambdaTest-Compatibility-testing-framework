@@ -37,7 +37,7 @@ cd Compatibilty-testing
 
 3. **Set up LambdaTest credentials in project**
 
-Create a **.env** file in the root directory:
+Create a `.env` file in the root directory:
 <pre>LT_USERNAME= your_lambdatest_username
 LT_ACCESS_KEY= your_lambdatest_access_key
 </pre>
@@ -63,7 +63,7 @@ source .venv/bin/activate
 </pre>
 
 ## Test Data Configuration
-The file **./src/data/test_data.xlsx** contains all configuration data for your test environment:
+The file `./src/data/test_data.xlsx` contains all configuration data for your test environment:
 
 ![alt text](images/image-7.png)
 
@@ -84,17 +84,15 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 
 ![alt text](images/image-5.png)
 
-<pre>
 💡 Note: To check which devices support which platform versions:
- use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
-</pre>
+ use the [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
 ## Load Test Configurations
-Run the following script to generate the test configuration JSON from .\src\data\test_data.xlsx:
+Run the following script to generate the test configuration JSON from `.\src\data\test_data.xlsx`:
 
 <pre>python .\src\data\generate_config.py</pre>
 
-Example of generated Test configuration JSON object from excel file **./src/data/test_data.xlsx** :
+Example of generated Test configuration JSON object from excel file `./src/data/test_data.xlsx` :
 
 ![alt text](images/image-3.png)
 
@@ -132,12 +130,12 @@ Run a test using pytest:
 
 ### The framework will:
 - Execute the test across all environments defined in the Excel file.
-- Automatically generates a **compatibility_test_report** in reports/ folder in Excel format with:
+- Automatically generates a `compatibility_test_report` in reports/ folder in Excel format with:
   - Device, Browser,Platform details
   - Pass/Fail status
   - LambdaTest session video link
 
-Example of **./reports/compatibility_test_report.xlsx**:
+Example of `./reports/compatibility_test_report.xlsx`:
 
 ![alt text](images/image-2.png)
 
