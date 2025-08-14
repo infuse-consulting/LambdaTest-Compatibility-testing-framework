@@ -13,11 +13,6 @@ It enables the execution of test scripts across a wide range of real and virtual
 - **Automated Reporting**
   - Automatically generates an Excel report with Device/browser/OS info,Test execution status and LambdaTest video session link
 
-## Tech Stack
-- Python for test scripts.
-- Selenium WebDriver for Browser automation.
-- pytest for Test execution.
-
 ## Project Structure
 ![alt text](image-1.png)
 
@@ -58,7 +53,7 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 
 ![alt text](image.png)
 
-- **Credentials Sheet**: Stores the test URL and related credentials for running tests.
+- **Url Sheet**: Stores the test URL and related credentials for running tests.
 
 **Example**:
 
