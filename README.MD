@@ -49,20 +49,31 @@ LT_ACCESS_KEY= your_lambdatest_access_key
 
 ## Test Data Configuration
 The file **./src/data/test_data.xlsx** contains all configuration data for your test environment:
+
+![alt text](image-4.png)
 - **Devices Sheet**: Defines cross-browser/device parameters:
 browser, browserVersion, platform, platformVersion, deviceName, etc.
-- **Credentials Sheet**: Stores the test URL and related credentials for running tests.
-- 💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
 
 **Example**:
 
 ![alt text](image.png)
 
+- **Credentials Sheet**: Stores the test URL and related credentials for running tests.
+- 💡 Note: To check which devices support which platform versions, use the LambdaTest Capabilities Generator  https://www.lambdatest.com/capabilities-generator/.
+
+**Example**:
+
+![alt text](image-5.png)
+
 ### Load Test Configurations
 Run the following script to generate the test configuration JSON from .\src\data\test_data.xlsx:
 <pre>python .\src\data\generate_config.py </pre>
 
-Eaxmple of generated Test configuration JSON object:
+Example of generated Test configuration JSON object from excel file **./src/data/test_data.xlsx** :
+test_data.xlsx
+![alt text](image-3.png)
+
+**JSON Object:**
 <pre>
   {
     "browser": "Chrome",
