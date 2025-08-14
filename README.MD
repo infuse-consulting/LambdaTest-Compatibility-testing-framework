@@ -14,7 +14,7 @@ It enables the execution of test scripts across a wide range of real and virtual
   - Automatically generates an Excel report with Device/browser/OS info,Test execution status and LambdaTest video session link
 
 ## Project Structure
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 ## Prerequisites
 ### Create a LambdaTest Account & Get Credentials
@@ -65,7 +65,7 @@ source .venv/bin/activate
 ## Test Data Configuration
 The file **./src/data/test_data.xlsx** contains all configuration data for your test environment:
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 **Devices Sheet**: Defines cross-browser/device parameters:
 browser, browserVersion, platform, platformVersion, deviceName, etc.
@@ -76,13 +76,13 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 
 **Example**:
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 **Url Sheet**: Stores the test URL and related credentials for running tests.
 
 **Example**:
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 <pre>
 💡 Note: To check which devices support which platform versions:
@@ -96,7 +96,7 @@ Run the following script to generate the test configuration JSON from .\src\data
 
 Example of generated Test configuration JSON object from excel file **./src/data/test_data.xlsx** :
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 **JSON Object:**
 <pre>
@@ -123,7 +123,7 @@ Run a test using pytest:
 
 Example of **./reports/compatibility_test_report.xlsx**:
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 <pre>
 💡 Note: Every execution appends Test Results to compatibility_test_report
@@ -132,4 +132,4 @@ Example of **./reports/compatibility_test_report.xlsx**:
 
 ## Workflow
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
