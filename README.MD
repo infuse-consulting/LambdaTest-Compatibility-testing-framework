@@ -79,13 +79,11 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 
 ![alt text](images/image.png)
 
-**Url Sheet**: Stores the test URL and related credentials for running tests.
+**Url Sheet**: Stores the test URL for running tests.
 
 **Example**:
 
 ![alt text](images/image-5.png)
-
-
 
 ## Load Test Configurations
 Run the following script to generate the test configuration JSON from `.\src\data\test_data.xlsx`:
