@@ -13,7 +13,14 @@ It enables the execution of test scripts across a wide range of real and virtual
 - **Automated Reporting**
   - Automatically generates an Excel report with Device/browser/OS info,Test execution status and LambdaTest video session link
 
+## Workflow
+- This diagram illustrates the complete workflow of the framework.
+
+![alt text](images/Workflow.png)
+
 ## Project Structure
+- The project follows a modular folder structure with dedicated directories for configurations, test scripts, reports, and utilities, ensuring better maintainability and scalability.
+
 ![alt text](images/image-1.png)
 
 ## Prerequisites
@@ -124,7 +131,7 @@ def test_login(setup):
 
 ## Running Tests
 Run a test using pytest:
-<pre> pytest .\tests\your_test_file.py -v -s </pre>
+<pre> pytest .\src\tests\your_test_file.py -v -s </pre>
 
 ### The framework will:
 - Execute the test across all environments defined in the Excel file.
@@ -142,6 +149,3 @@ Example of `./reports/compatibility_test_report.xlsx`:
 </pre>
 
 
-## Workflow
-
-![alt text](images/image-8.png)
