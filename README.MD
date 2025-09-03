@@ -133,6 +133,11 @@ def test_login(setup):
 Run a test using pytest:
 <pre> pytest pytest .\tests\test_login.py -v -s </pre>
 
+<pre>
+  💡 Note: Test files should be placed inside the tests/ directory 
+    Test function names must be prefixed with test_ for pytest to detect and execute them.
+</pre>
+
 ### The framework will:
 - Execute the test across all environments defined in the Excel file.
 - Automatically generates a `compatibility_test_report` in reports/ folder in Excel format with:
