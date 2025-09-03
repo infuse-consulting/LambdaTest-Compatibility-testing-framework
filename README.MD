@@ -131,7 +131,7 @@ def test_login(setup):
 
 ## Running Tests
 Run a test using pytest:
-<pre> pytest .\src\tests\your_test_file.py -v -s </pre>
+<pre> pytest pytest .\tests\test_login.py -v -s </pre>
 
 ### The framework will:
 - Execute the test across all environments defined in the Excel file.
