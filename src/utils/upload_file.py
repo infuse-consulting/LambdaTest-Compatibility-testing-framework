@@ -22,3 +22,7 @@ def upload_file_to_lambdatest(file_path,username,password):
             raise Exception(f"Unexpected response format: {result}")
     else:
         raise Exception(f"File upload failed: {response.status_code} {response.text}")
+
+
+#for Real devices
+# curl --user "username:pw" -X POST "https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/C:/Users/user/Pictures/Screenshots/myimages/desktop.png"" -F "type=image" -F "custom_id=SampleImage"

@@ -15,4 +15,3 @@ with open(json_path, "w") as json_file:
 
 
 
-# curl --user "username:pw" -X POST "https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/C:/Users/srujana.prabhu/Pictures/Screenshots/myimages/desktop.png"" -F "type=image" -F "custom_id=SampleImage"
