@@ -9,7 +9,6 @@ from src.utils.get_platform import get_platform
 
 class Framework:    
 
-
     def __init__(self,driver):
         """Set up Selenium driver"""
         self.wait_time=10

@@ -14,6 +14,7 @@ class LoginPage(Framework):
         self.enter_keys(self.password,"secret_sauce")
         hide_keyboard(self.driver)
         self.click_element(self.login_button)
+        
 
 
     

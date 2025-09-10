@@ -93,10 +93,6 @@ browser, browserVersion, platform, platformVersion, deviceName, etc.
 ![alt text](images/image-5.png)
 
 ## Load Test Configurations
-Run the following script to generate the test configuration JSON from `.\src\data\test_data.xlsx`:
-
-<pre>python .\src\data\generate_config.py</pre>
-
 Example of generated Test configuration JSON object from excel file `./src/data/test_data.xlsx` :
 
 ![alt text](images/image-3.png)

@@ -3,13 +3,35 @@ import pytest
 from dotenv import load_dotenv
 load_dotenv()
 import json
+import subprocess
 from selenium import webdriver
 from urllib.parse import quote
 from src.utils.excel_writer import write_result
 from datetime import datetime
 import pandas as pd
+from src.utils.generate_config import generate_test_data
 from src.pages.login_page import LoginPage
-from src.utils.projectUtils import Utils
+from src.utils.project_utils import Utils
+
+def pytest_sessionstart(session):
+    """Generate test_data.json before any tests run"""
+    generate_test_data()
+
+def load_test_configs():
+    json_file_path = os.path.join(os.path.dirname(__file__), "./src/data/test_data.json")
+    if not os.path.exists(json_file_path):
+        raise FileNotFoundError(f"Missing test_data.json at {json_file_path}")
+    with open(json_file_path, "r") as f:
+        content = f.read().strip()
+        if not content:
+            raise ValueError(f"test_data.json is empty at {json_file_path}")
+        return json.loads(content)["data"]
+
+@pytest.fixture(scope="session",params=load_test_configs())
+def device_config(request):
+    """Provide device/browser configuration for each test"""
+    load_test_configs()
+    return request.param
 
 @pytest.fixture()
 def dataLoad():
@@ -20,23 +42,14 @@ def dataLoad():
     url = df['url'].iloc[0].strip()
     return [username,password,url]
 
-json_file_path = os.path.join(os.path.dirname(__file__), "./src/data/test_data.json")
-with open(json_file_path) as f:
-    test_configs = json.load(f)["data"]
-
 @pytest.fixture
 def setup(driver, dataLoad):
     """Prepare LoginPage, Utils, and URL for tests"""
     _, _, url = dataLoad
+
     login_page = LoginPage(driver)
     assertion = Utils(driver)
     return login_page, assertion, url
-
-
-@pytest.fixture(params=test_configs)
-def device_config(request):
-    """Provide device/browser configuration for each test from JSON file"""
-    return request.param
 
 @pytest.fixture(scope="function")
 def driver(dataLoad, device_config):
