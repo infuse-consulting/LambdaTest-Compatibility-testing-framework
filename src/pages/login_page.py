@@ -1,4 +1,4 @@
-from framework import Framework
+from ..core.framework import Framework
 from ..utils.hide_keyboard import hide_keyboard
 
 class LoginPage(Framework):

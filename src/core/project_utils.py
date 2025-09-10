@@ -1,6 +1,6 @@
-from .logger import message_logger
+from ..utils.logger import message_logger
 from selenium.webdriver.support.ui import Select
-from framework import Framework
+from .framework import Framework
 
 class Utils(Framework):
     def __init__(self, driver):
