@@ -11,7 +11,7 @@ from datetime import datetime
 import pandas as pd
 from src.utils.generate_config import generate_test_data
 from src.pages.login_page import LoginPage
-from src.core.project_utils import Utils
+from src.core.assertions import Utils
 
 def pytest_sessionstart(session):
     """Generate test_data.json before any tests run"""
