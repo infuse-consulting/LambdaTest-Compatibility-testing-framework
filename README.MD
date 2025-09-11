@@ -42,7 +42,7 @@ It enables the execution of test scripts across a wide range of real and virtual
 
 <pre>
 git clone https://github.com/infuse-consulting/LambdaTest-Compatibility-testing-framework.git
-cd Compatibilty-testing
+cd LambdaTest-Compatibility-testing-framework
 </pre>
 
 2. **Install dependencies**
