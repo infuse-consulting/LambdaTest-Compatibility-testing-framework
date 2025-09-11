@@ -41,7 +41,7 @@ It enables the execution of test scripts across a wide range of real and virtual
 1. **Clone the repository**
 
 <pre>
-git clone https://github.com/srujanaa6/Compatibilty-testing.git
+git clone https://github.com/infuse-consulting/LambdaTest-Compatibility-testing-framework.git
 cd Compatibilty-testing
 </pre>
 
