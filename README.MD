@@ -145,7 +145,7 @@ def test_login(setup):
 
 Run a test using pytest:
 
-<pre> pytest pytest .\tests\test_login.py -v -s </pre>
+<pre>pytest .\tests\test_login.py -v -s </pre>
 
 <pre>
   💡 Note: Test files should be placed inside the tests/ directory 
